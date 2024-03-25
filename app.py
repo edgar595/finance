@@ -140,13 +140,13 @@ app.layout = html.Div([
         html.Div([
             html.A(
             html.Img(src="/assets/website.png", className="icon", id="website-icon"),
-            href="https://yourwebsite.com",
+            href="https://eddgarmugambi.netlify.app/",
             target="_blank",
             style={'display': 'inline-block', 'position': 'absolute', 'left': 'calc(100% - 80px)'}  
             ),
             html.A(
             html.Img(src="/assets/twitter.png", className="icon", id="twitter-icon"),
-            href="https://yourwebsite.com",
+            href="https://twitter.com/EdgarMugambi",
             target="_blank",
             style={'display': 'inline-block', 'position': 'absolute', 'left': 'calc(100% - 55px)'}  
             )
@@ -357,10 +357,10 @@ def display_page(pathname):
                             )
         
                 # Assuming 'finance' is your pandas DataFrame
-        fig3 = box(finance, x="Occupation", y="Annual_Income", title="Distribution of Annual Income by Occupation")
+        fig3 = box(finance, x="Credit_Mix", y="Annual_Income", title="Distribution of Annual Income by credit score")
 
         # Customize labels (similar to plt.xlabel and plt.ylabel)
-        fig3.update_xaxes(title_text="Occupation")
+        fig3.update_xaxes(title_text="Credit Score")
         fig3.update_yaxes(title_text="Annual Income")
 
         # Rotate x-axis labels for better readability
@@ -394,7 +394,6 @@ def display_page(pathname):
                     html.Div(
                         style={'width': '55%'},  
                         children=[
-                            html.P('Another Example of plot to help visualize Income by Occupation'),
                             dcc.Graph(id='example-plot', figure=fig3) 
                         ]
                     ),

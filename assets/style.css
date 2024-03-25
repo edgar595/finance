@@ -1,5 +1,22 @@
+body {
+    background-color: lightblue;
+}
+
 .header {
-    background-color: aqua;
+    background-color: rgb(120, 151, 151);
     border-radius: 5px;
     padding: 15px;
+}
+
+.buttons {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .buttons button {
+    margin-right: 10px; 
+    border-radius: 5px;
+}
+.icons {
+    padding-bottom: 10px;
 }
